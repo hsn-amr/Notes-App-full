@@ -28,7 +28,7 @@ class NotesDBHelper(context: Context): SQLiteOpenHelper(context,"Notes.db", null
 
     @SuppressLint("Range")
     fun retrieveAllNotes(): ArrayList<Note> {
-        var notes= ArrayList<Note>()
+        val notes= ArrayList<Note>()
         val cursor: Cursor = sqliteDatabase.query("Note", null, null, null, null, null, null)
         cursor.moveToFirst()
 
@@ -36,5 +36,15 @@ class NotesDBHelper(context: Context): SQLiteOpenHelper(context,"Notes.db", null
             notes.add(Note(cursor.getString(cursor.getColumnIndex("text"))))
         }while (cursor.moveToNext())
         return notes
+    }
+
+    fun updateNote(newText: String, oldText: String){
+        val cv = ContentValues()
+        cv.put("text", newText)
+        sqliteDatabase.update("Note",cv,"text=?", arrayOf(oldText))
+    }
+
+    fun deleteNote(note: Note){
+        sqliteDatabase.delete("Note","text=?", arrayOf(note.text))
     }
 }

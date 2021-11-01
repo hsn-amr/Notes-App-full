@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/Notes-App-full/app/src/main/res/layout/activity_main.xml" value="0.13020833333333334" />
+        <entry key="..\:/AndroidStudioProjects/Notes-App-full/app/src/main/res/layout/item_row.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/NotesApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/NotesApp/app/src/main/res/layout/item_row.xml" value="0.25416666666666665" />
       </map>
